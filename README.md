@@ -85,7 +85,7 @@
     
         npm install style-loader css-loader --save
 
-—>在 MyTotallyAwesomeApp 新建build(放置打包后文件)，src(放置源代码)文件夹；
+—>在 MyApp 新建build(放置打包后文件)，src(放置源代码)文件夹；
     index.html，entry.js，webpack.config.js
 
 **index.html 内容：**
@@ -137,7 +137,6 @@
             );
         }
     });
-    // 将组件暴露出去
     module.exports = HelloWorld;
 
 —>在entry.js中配置，渲染页面
@@ -156,7 +155,9 @@
         document.getElementById我是张三('container')
     );
 
+—>如果打包报错Run `npm rebuild node-sass` to build the binding for your current environment.全局安装
 
+    npm install -g node-sass
 
 #ES6模式
 

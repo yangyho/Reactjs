@@ -3,18 +3,19 @@ import ReactDOM from "react-dom";
 
 
 // 可以引入js文件，css样式表
-require('./src/ES6Test/es6main.js');
+// require('./src/ES6Test/es6main.js');
+require('./src/normalize.css')
 
 
 //引入组件
 var HelloWorld = require('./src/helloworld/HelloWorld.jsx');
-// var LightningCounterDisplay = require('./src/counter/counter.jsx')
+var LightningCounterDisplay = require('./src/counter/counter.jsx');
+var Header = require('./src/header/header.jsx');
 
 //页面渲染
 ReactDOM.render(
 	<div>
-		<HelloWorld name="world" />
-		// <LightningCounterDisplay />
+		<Header />
 	</div>,
 	document.getElementById('container')
 );
