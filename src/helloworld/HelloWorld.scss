@@ -1,0 +1,12 @@
+/***变量***/
+$div-bg: red;
+$h1-color: #fff;
+$h1-font:100px;
+
+.helloBox{
+	width: 100%;
+	padding:20px 0;
+	background: $div-bg;
+	color: $h1-color;
+	text-align: center;
+}
