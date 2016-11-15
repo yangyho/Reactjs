@@ -159,6 +159,10 @@
 
     npm install -g node-sass
 
+极客学院整理
+
+    http://wiki.jikexueyuan.com/project/react/
+
 #ES6模式
 
 
