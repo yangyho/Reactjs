@@ -3,7 +3,7 @@ var path = require("path");
 
 module.exports = {
 	//入口文件
-    entry: path.resolve(__dirname, './entry.js'),
+    entry: path.resolve(__dirname, './src/entry.js'),
 
     output: {
         path: path.resolve(__dirname, "build"),
