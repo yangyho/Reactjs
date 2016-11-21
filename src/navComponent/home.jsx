@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import Loding from './lodding.js'
 
 var Home = React.createClass({
 	/**
@@ -20,7 +21,7 @@ var Home = React.createClass({
 	componentDidMount () {
 		var _this = this;
 		$.ajax({
-			url:"https://api.douban.com/v2/movie/top250?count=10",
+			url:"https://api.douban.com/v2/movie/top250?count=50",
 			type: "GET",
 			dataType: "jsonp",
 			success: function(data){
@@ -42,24 +43,34 @@ var Home = React.createClass({
 	 *  this.state.items.map()遍历数据 
 	 */
 	render () {
-		return (
-			<div>
-				<h1>首页</h1>
-    			written by <strong>{this.state.username}</strong>
-    			<ul className="booksList">
-    				{
-    					this.state.items.map(function(items){
-    						return (
-    							<li>
-    								<div><img src={items.images.medium} /></div>
-    								<a href={items.alt}>{items.title}</a>
-    							</li>
-    						)
-    					})
-    				}
-    			</ul>
-			</div>
-		);
+		if(this.state.items.length == 0){
+			
+			return (
+				<div>
+					<h1>首页</h1>
+					<Loding />
+				</div>
+			) 
+		} else {
+			return (
+				<div>
+					<h1>首页</h1>
+	    			written by <strong>{this.state.username}</strong>
+	    			<ul className="booksList">
+	    				{
+	    					this.state.items.map(function(items){
+	    						return (
+	    							<li>
+	    								<div><img src={items.images.medium} /></div>
+	    								<a href={items.alt}>{items.title}</a>
+	    							</li>
+	    						)
+	    					})
+	    				}
+	    			</ul>
+				</div>
+			);
+		}
 	}
 });
 module.exports = Home;
