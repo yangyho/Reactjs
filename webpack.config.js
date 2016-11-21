@@ -31,11 +31,11 @@ module.exports = {
 	resolve: {
         extensions: ['', '.js', '.jsx']
     },
+    
     devServer: {
         historyApiFallback: true,
         noInfo: true
     },
-    devtool: '#eval-source-map',
 
     plugins: [
     	//压缩js代码

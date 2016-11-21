@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 var Contact = React.createClass({
 	render: function() {

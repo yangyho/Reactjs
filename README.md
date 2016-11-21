@@ -163,10 +163,6 @@
 
     http://wiki.jikexueyuan.com/project/react/
 
-react 中文文档
-
-    http://www.css88.com/react/tips/initial-ajax.html
-
 #ES6模式
 
 

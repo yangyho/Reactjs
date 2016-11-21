@@ -5,17 +5,19 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 // 引入文件
 import './lib/normalize.css';
 import './lib/jquery-1.10.2.min.js';
-
+import './navComponent/style.scss';
 
 // 引入组件
-var mainApp = require('./mainApp/mainApp.jsx');
-var Home = require('./homeComponent/home.jsx')
-var About = require('./homeComponent/page2.jsx');
-var Contact = require('./homeComponent/page3.jsx');
-const appEle = document.getElementById('container');
+import mainApp from './mainApp/mainApp.jsx';
+import Home from './navComponent/home.jsx';
+import About from './navComponent/page2.jsx';
+import Contact from './navComponent/page3.jsx';
 
-// 页面渲染
-// <IndexRoute component={Home}/>处理默认显示的组件
+/** 
+ *  页面渲染
+ *  <IndexRoute component={Home}/>处理默认显示的组件
+ */ 
+const appEle = document.getElementById('container');
 ReactDOM.render(
 	<Router history={hashHistory}>
   		<Route path="/" component={mainApp}>

@@ -1,0 +1,13 @@
+body{
+	font-family: "微软雅黑";
+}
+
+ul.booksList{
+	margin-top: 15px;
+	list-style-type:  disc;
+	overflow: hidden;
+	>li{
+		border-bottom:1px solid #000; 
+		// float: left;
+	}
+}
