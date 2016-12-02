@@ -21,7 +21,7 @@ var Home = React.createClass({
 	componentDidMount () {
 		var _this = this;
 		$.ajax({
-			url:"https://api.douban.com/v2/movie/top250?count=50",
+			url:"https://api.douban.com/v2/movie/top250?count=10",
 			type: "GET",
 			dataType: "jsonp",
 			success: function(data){
@@ -36,6 +36,10 @@ var Home = React.createClass({
 				})
 			}
 		})
+	},
+
+	handleClick (){
+		console.log("in")
 	},
 
 	/**
@@ -54,7 +58,7 @@ var Home = React.createClass({
 		} else {
 			return (
 				<div>
-					<h1>首页</h1>
+					<h1 onClick={this.handleClick}>首页</h1>
 	    			written by <strong>{this.state.username}</strong>
 	    			<ul className="booksList">
 	    				{
@@ -63,6 +67,7 @@ var Home = React.createClass({
 	    							<li>
 	    								<div><img src={items.images.medium} /></div>
 	    								<a href={items.alt}>{items.title}</a>
+	    								<button>删除</button>
 	    							</li>
 	    						)
 	    					})
